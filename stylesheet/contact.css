@@ -1,0 +1,268 @@
+.background {
+    display: grid;
+    position: relative; /* Allows positioning of child elements */
+    grid-column: span 12;
+    grid-template-columns: repeat(12, 1fr);
+    width: 100%; /* Full width */
+    height: 70vh; /* Full height of the viewport */
+    align-items: center; /* Center the content vertically */
+    justify-content: center; /* Center the content horizontally */
+    overflow: hidden; /* Ensures the image doesn't overflow */
+}
+
+.background img {
+    position: absolute; /* Allows it to cover the banner */
+    filter: brightness(70%);
+    top: 0;
+    left: 0;
+    width: 100%; /* Make the image fill the banner */
+    height: 100%; /* Full height of the viewport */
+    object-fit: cover; /* Ensures the image maintains aspect ratio */
+    z-index: -1; /* Send the image behind the content */
+}
+
+.background .container {
+    grid-column: span 12;
+    text-align: center;
+    color: white;
+}
+
+.background .container h1 {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 6em;
+    margin-bottom: 100px;
+}
+
+.options {
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    align-items: center;
+    position: absolute;
+    top: 80%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust to perfect center */
+    z-index: 1; /* Ensure it's on top of the background */
+    max-width: 80%; /* Prevents items from spreading too wide */
+    min-width: none;
+}
+
+.address {
+    background-color: white;
+    width: 400px;
+    height: 300px;
+    padding: 40px 0;
+    border: black solid 1px;
+    text-align: center;
+}
+
+.address h4{
+    font-size: 3em;
+}
+
+.address p {
+    font-size: 1.5em;
+    margin: 50px 0;
+}
+
+.contact-info {
+    display: flex;
+    margin: 0 150px;
+}
+
+.contact-info section {
+    background-color: white;
+    width: 600px;
+    height: 300px;
+    border: black solid 1px;
+    text-align: center;
+}
+
+.contact-info section i {
+    font-size: 2em;
+    margin: 20px 0;
+}
+
+.contact-info h6 {
+    font-size: 2em;
+}
+
+.phone-number a {
+    font-size: 2em;
+    color: black;
+}
+
+.location {
+    display: flex;
+    width: 1200px;
+    justify-content: space-around;
+    margin: 300px auto 100px;
+    grid-column: 3/11;
+}
+
+.opening-hours {
+    background-color: white;
+    border: solid black 1px;
+    width: 400px;
+    height: 300px;
+    font-size: 1.5em;
+}
+
+.opening-hours {
+    padding: 0 20px;
+}
+
+table th {
+    text-align: left;
+}
+
+table td {
+    text-align: right;
+}
+
+.iframe-container {
+    width: 100%; /* Make the container take full width */
+    aspect-ratio: 16 / 9; /* Maintain aspect ratio */
+    overflow: hidden;
+}
+
+.iframe-container iframe {
+    justify-content: center;
+    width: 100%; /* Adjust to container width */
+    height: 100%; /* Maintain aspect ratio */
+    border: 0;
+}
+
+@media (max-width: 1700px) {
+    .contact-info {
+        margin: 0 40px;
+    }
+}
+
+@media (max-width: 1440px) {
+    .options {
+        display: flex;
+        justify-content: center; /* Center items horizontally */
+        align-items: center;
+        position: absolute;
+        top: 80%; /* Center vertically */
+        left: 50%; /* Center horizontally */
+        transform: translate(-50%, -50%); /* Adjust to perfect center */
+        z-index: 1; /* Ensure it's on top of the background */
+    }
+
+    .address h4{
+        font-size: 2.5em;
+    }
+    
+    .address p {
+        font-size: 1.4em;
+        margin: 50px 0;
+    }
+
+    .address section {
+        padding: 0px 20px;
+    }
+
+    .contact-info {
+        display: flex;
+        margin: 0 80px;
+    }
+
+    .contact-info section {
+        width: 500px;
+    }
+
+    .opening-hours {
+        font-size: 1em;
+    }
+
+    .location {
+        width: 80vw;
+    }
+}
+
+@media (max-width: 1024px) {
+    .address p {
+        margin: 25px 0;
+    }
+
+    .contact-info {
+        margin: 0px;
+        width: 50%;
+    }
+
+    .contact-info section i {
+        font-size: 2em;
+        margin: 50px 0;
+    }
+    
+    .contact-info h6 {
+        font-size: 1.5em;
+    }
+
+    .phone-number{
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-info section i {
+        font-size: 2em;
+        margin: 20px 0;
+    }
+
+    .options {
+        top: 100%; /* Center vertically */
+        left: 50%; /* Center horizontally */
+        flex-direction: column;
+    }
+
+    .address{
+        height: 200px;
+        width: 100%;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        margin: 50px 0;
+        height: 100px;
+        width: 100%;
+    }
+
+    .contact-info section {
+        padding: 10px 50px 50px 50px;
+    }
+
+    .contact-info section i {
+        font-size: 2em;
+    }
+
+    .contact-info h6, .phone-number a  {
+        font-size: 1.7em;
+    }
+
+    .opening-hours {
+        margin: 200px 0;
+        height: 200px;
+        width: 100%;
+    }
+
+    .location {
+        margin: 600px 0 50px 0;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 425px) {
+    .background .container h1 {
+        font-size: 5em;
+        margin-bottom: 100px;
+    }
+
+    .contact-info h6, .phone-number a  {
+        font-size: 1.3em;
+    }
+}
